@@ -1,8 +1,8 @@
 import React from 'react'
-import { Heart, Star, ShoppingBag, Eye, Sparkles } from 'lucide-react'
+import { Heart, Star, ShoppingBag, Eye, Edit3, Trash2 } from 'lucide-react'
 import { useCart } from '../context/CartContext'
 
-export const ProductCard = ({ product, onOpenDetails }) => {
+export const ProductCard = ({ product, onOpenDetails, onEdit, onDelete }) => {
   const { addToCart, toggleWishlist, isWishlisted, formatPrice } = useCart()
   const wishlisted = isWishlisted(product.id)
 
@@ -18,6 +18,18 @@ export const ProductCard = ({ product, onOpenDetails }) => {
   const handleHeartClick = (e) => {
     e.stopPropagation()
     toggleWishlist(product.id)
+  }
+
+  const handleEditClick = (e) => {
+    e.stopPropagation()
+    if (onEdit) onEdit(product)
+  }
+
+  const handleDeleteClick = (e) => {
+    e.stopPropagation()
+    if (window.confirm(`¿Estás seguro de que deseas eliminar "${product.name}" del catálogo?`)) {
+      if (onDelete) onDelete(product.id)
+    }
   }
 
   return (
@@ -44,21 +56,45 @@ export const ProductCard = ({ product, onOpenDetails }) => {
               {product.tag}
             </span>
           )}
-          {product.materials && (
+          {product.materials && product.materials[0] && (
             <span className="px-2 py-0.5 rounded-md text-[9px] font-medium bg-black/60 text-gray-300 backdrop-blur-sm">
               {product.materials[0]}
             </span>
           )}
         </div>
 
-        {/* Wishlist Button */}
-        <button
-          onClick={handleHeartClick}
-          aria-label="Agregar a favoritos"
-          className="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-black/50 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:text-[#d4af37] transition-transform active:scale-90 z-10"
-        >
-          <Heart className={`w-4 h-4 ${wishlisted ? 'fill-[#e5c378] text-[#e5c378]' : 'text-gray-300'}`} />
-        </button>
+        {/* Top-Right Action Controls (Wishlist & Quick Edit/Delete) */}
+        <div className="absolute top-2.5 right-2.5 flex items-center gap-1.5 z-10">
+          {onEdit && (
+            <button
+              onClick={handleEditClick}
+              aria-label="Editar joya"
+              className="w-7 h-7 rounded-full bg-black/60 backdrop-blur-md border border-white/10 flex items-center justify-center text-gray-300 hover:text-[#d4af37] transition-transform active:scale-90"
+              title="Editar joya"
+            >
+              <Edit3 className="w-3.5 h-3.5" />
+            </button>
+          )}
+
+          {onDelete && (
+            <button
+              onClick={handleDeleteClick}
+              aria-label="Eliminar joya"
+              className="w-7 h-7 rounded-full bg-black/60 backdrop-blur-md border border-white/10 flex items-center justify-center text-gray-300 hover:text-red-400 transition-transform active:scale-90"
+              title="Eliminar joya"
+            >
+              <Trash2 className="w-3.5 h-3.5" />
+            </button>
+          )}
+
+          <button
+            onClick={handleHeartClick}
+            aria-label="Agregar a favoritos"
+            className="w-8 h-8 rounded-full bg-black/50 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:text-[#d4af37] transition-transform active:scale-90"
+          >
+            <Heart className={`w-4 h-4 ${wishlisted ? 'fill-[#e5c378] text-[#e5c378]' : 'text-gray-300'}`} />
+          </button>
+        </div>
 
         {/* Quick View Pill on Hover / Tap */}
         <div className="absolute bottom-2.5 left-2.5 right-2.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden sm:flex items-center justify-center gap-1.5 py-1.5 rounded-lg bg-black/70 backdrop-blur-md text-xs text-white border border-white/10">
@@ -73,12 +109,12 @@ export const ProductCard = ({ product, onOpenDetails }) => {
           {/* Category & Rating */}
           <div className="flex items-center justify-between gap-1 mb-1.5 text-[11px] text-gray-400">
             <span className="uppercase tracking-wider font-medium text-[#d4af37]/80 text-[10px]">
-              {product.categoryLabel}
+              {product.categoryLabel || 'Joyería'}
             </span>
             <div className="flex items-center gap-1">
               <Star className="w-3 h-3 text-[#d4af37] fill-[#d4af37]" />
               <span className="font-semibold text-white">{product.rating}</span>
-              <span className="text-[9px] text-gray-500">({product.reviewCount})</span>
+              <span className="text-[9px] text-gray-500">({product.reviewCount || 0})</span>
             </div>
           </div>
 

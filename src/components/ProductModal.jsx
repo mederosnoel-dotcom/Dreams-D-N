@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { X, Star, Heart, ShieldCheck, Award, Truck, Check, Share2, MessageCircle, ShoppingBag, Sparkles } from 'lucide-react'
+import { X, Star, Heart, ShieldCheck, Award, Truck, Check, Share2, MessageCircle, ShoppingBag, Sparkles, Edit3 } from 'lucide-react'
 import { useCart } from '../context/CartContext'
 
-export const ProductModal = ({ product, onClose }) => {
+export const ProductModal = ({ product, onClose, onEdit }) => {
   if (!product) return null
 
   const { addToCart, setIsCartOpen, setIsCheckoutOpen, toggleWishlist, isWishlisted, formatPrice } = useCart()
@@ -60,6 +60,19 @@ export const ProductModal = ({ product, onClose }) => {
           </div>
 
           <div className="flex items-center gap-1">
+            {onEdit && (
+              <button
+                onClick={() => {
+                  onClose()
+                  onEdit(product)
+                }}
+                className="flex items-center gap-1 px-2.5 py-1 text-xs text-[#d4af37] bg-[#d4af37]/10 hover:bg-[#d4af37]/20 border border-[#d4af37]/40 rounded-full transition-colors mr-1"
+                title="Editar datos de esta joya"
+              >
+                <Edit3 className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">Editar</span>
+              </button>
+            )}
             <button
               onClick={() => toggleWishlist(product.id)}
               className="p-2 text-gray-400 hover:text-[#d4af37] transition-colors rounded-full"

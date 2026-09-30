@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { ShoppingBag, Heart, Search, Diamond, Sparkles, X, SlidersHorizontal, Database } from 'lucide-react'
+import { ShoppingBag, Heart, Search, Diamond, Sparkles, X, PlusCircle, Database } from 'lucide-react'
 import { useCart } from '../context/CartContext'
 import { isSupabaseConfigured } from '../lib/supabase'
 
-export const Navbar = ({ onOpenSupabaseModal, searchQuery, setSearchQuery }) => {
+export const Navbar = ({ onOpenSupabaseModal, onOpenAddProduct, searchQuery, setSearchQuery }) => {
   const { totalItemCount, setIsCartOpen, wishlist, currency, setCurrency } = useCart()
   const [isSearchOpen, setIsSearchOpen] = useState(false)
 
@@ -63,6 +63,16 @@ export const Navbar = ({ onOpenSupabaseModal, searchQuery, setSearchQuery }) => 
 
         {/* Right: Actions (Search, Wishlist, Cart) */}
         <div className="flex items-center gap-1 sm:gap-2">
+          {/* Botón Administrador: Agregar Joya */}
+          <button
+            onClick={onOpenAddProduct}
+            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full gold-gradient-bg text-[#0b0c10] font-bold text-xs shadow-md hover:brightness-110 active:scale-95 transition-all"
+            title="Introducir nueva joya con foto y precio"
+          >
+            <PlusCircle className="w-4 h-4" />
+            <span className="hidden sm:inline">Agregar Joya</span>
+          </button>
+
           {/* Toggle Búsqueda */}
           <button
             onClick={() => setIsSearchOpen(!isSearchOpen)}
