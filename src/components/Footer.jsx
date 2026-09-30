@@ -15,7 +15,7 @@ export const Footer = ({ onSelectCategory }) => {
               </span>
             </div>
             <p className="text-gray-400 text-xs leading-relaxed font-light">
-              Maison de alta orfebrería y diseño de joyas finas en auténtica Plata Esterlina Ley 925. Cada pieza es forjada con acabados rodinados antideslustre y circones de máximo brillo.
+              Maison de alta orfebrería y diseño de joyas finas en auténtica Plata Fina. Cada pieza es forjada con acabados rodinados antideslustre y circones de máximo brillo.
             </p>
             <div className="pt-2 flex items-center gap-3">
               <a href="#" aria-label="Instagram" className="w-8 h-8 rounded-full bg-[#141620] border border-gray-800 flex items-center justify-center text-gray-300 hover:text-white hover:border-slate-400 transition-colors">
@@ -35,12 +35,12 @@ export const Footer = ({ onSelectCategory }) => {
             <ul className="space-y-2">
               <li>
                 <button onClick={() => onSelectCategory('anillos')} className="hover:text-slate-200 transition-colors">
-                  Anillos en Plata 925
+                  Anillos de Plata
                 </button>
               </li>
               <li>
                 <button onClick={() => onSelectCategory('collares')} className="hover:text-slate-200 transition-colors">
-                  Cadenas & Dijes 925
+                  Cadenas & Dijes de Plata
                 </button>
               </li>
               <li>
@@ -64,7 +64,7 @@ export const Footer = ({ onSelectCategory }) => {
             <ul className="space-y-2">
               <li className="flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-slate-300" />
-                <span>Certificado de Pureza Ley 925</span>
+                <span>Certificado de Autenticidad de Plata</span>
               </li>
               <li>Garantía de Autenticidad Vitalicia</li>
               <li>Guía de Limpieza & Cuidado de Plata</li>

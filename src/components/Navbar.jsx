@@ -9,11 +9,11 @@ export const Navbar = ({ onOpenSupabaseModal, onOpenAddProduct, searchQuery, set
 
   return (
     <header className="sticky top-0 z-40 w-full bg-[#090a0f]/95 backdrop-blur-md border-b border-[#1f2330] transition-all">
-      {/* Top Banner Plata 925 */}
+      {/* Top Banner Plata */}
       <div className="bg-gradient-to-r from-[#12141c] via-[#1a1d28] to-[#12141c] border-b border-slate-700/40 text-[11px] md:text-xs py-1.5 px-4 text-center text-slate-200 flex items-center justify-center gap-2">
         <Sparkles className="w-3.5 h-3.5 text-slate-300 animate-pulse" />
         <span className="tracking-widest uppercase font-medium">
-          DREAMS D&N • Joyería en Plata Esterlina Ley 925 Certificada • Envío Asegurado
+          DREAMS D&N • Joyería Fina de Plata Certificada • Envío Asegurado
         </span>
         <Sparkles className="w-3.5 h-3.5 text-slate-300 animate-pulse hidden sm:inline" />
       </div>
@@ -57,7 +57,7 @@ export const Navbar = ({ onOpenSupabaseModal, onOpenAddProduct, searchQuery, set
             </span>
           </div>
           <span className="block text-[8px] tracking-[0.35em] text-slate-400 uppercase font-light -mt-0.5">
-            Plata Esterlina Ley 925
+            Joyería Fina de Plata
           </span>
         </div>
 
@@ -126,7 +126,7 @@ export const Navbar = ({ onOpenSupabaseModal, onOpenAddProduct, searchQuery, set
           <Search className="w-4 h-4 text-slate-400" />
           <input
             type="text"
-            placeholder="Buscar por anillos de plata, cadenas 925, pulseras, aretes..."
+            placeholder="Buscar por anillos, cadenas de plata, pulseras, aretes..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             autoFocus

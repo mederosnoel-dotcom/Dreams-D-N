@@ -24,7 +24,7 @@ export const CategoryFilter = ({
 
   const materials = [
     { id: 'all', label: 'Toda la Plata' },
-    { id: 'Plata Ley 925', label: 'Plata Ley 925' },
+    { id: 'Plata Fina', label: 'Plata Fina' },
     { id: 'Plata Rodinada', label: 'Plata Rodinada' },
     { id: 'Plata con Circones', label: 'Plata con Circones' },
     { id: 'Plata Envejecida', label: 'Plata Envejecida / Bali' }

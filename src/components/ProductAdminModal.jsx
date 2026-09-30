@@ -25,15 +25,15 @@ export const ProductAdminModal = ({ isOpen, onClose, onProductsUpdated, editingP
     shortDescription: editingProduct?.shortDescription || '',
     description: editingProduct?.description || '',
     images: editingProduct?.images || [],
-    materials: editingProduct?.materials || ['Plata Ley 925', 'Plata Rodinada'],
+    materials: editingProduct?.materials || ['Plata Fina', 'Plata Rodinada'],
     sizes: editingProduct?.sizes || ['6', '7', '8'],
     stock: editingProduct?.stock || 5,
-    tag: editingProduct?.tag || 'Plata Ley 925',
+    tag: editingProduct?.tag || 'Plata Fina',
     specs: editingProduct?.specs || {
-      metal: 'Plata Esterlina Ley 925',
+      metal: 'Plata Fina Certificada',
       gem: 'Circones Cúbicos / Piedras Naturales',
       weight: '4.8 gramos',
-      guarantee: 'Certificado de Plata 925 & Garantía Vitalicia'
+      guarantee: 'Certificado de Autenticidad de Plata & Garantía Vitalicia'
     }
   })
 
@@ -180,8 +180,8 @@ export const ProductAdminModal = ({ isOpen, onClose, onProductsUpdated, editingP
       const productPayload = {
         ...formData,
         categoryLabel: catLabels[formData.category] || 'Joya en Plata',
-        shortDescription: formData.shortDescription || `${formData.name} forjado artesanalmente en ${formData.materials[0] || 'plata esterlina ley 925'}.`,
-        description: formData.description || `Pieza única en auténtica plata esterlina ley 925 de la colección DREAMS D&N. Diseñada con extrema precisión y brillo deslumbrante.`
+        shortDescription: formData.shortDescription || `${formData.name} forjado artesanalmente en ${formData.materials[0] || 'plata fina'}.`,
+        description: formData.description || `Pieza única en auténtica plata fina de la colección DREAMS D&N. Diseñada con extrema precisión y brillo deslumbrante.`
       }
 
       await productService.saveProduct(productPayload)
@@ -207,7 +207,7 @@ export const ProductAdminModal = ({ isOpen, onClose, onProductsUpdated, editingP
           <div className="flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-slate-300" />
             <h3 className="font-serif text-base sm:text-lg font-semibold text-white tracking-wide">
-              {editingProduct ? 'Editar Joya' : 'Publicar Nueva Joya en Plata 925'}
+              {editingProduct ? 'Editar Joya' : 'Publicar Nueva Joya de Plata'}
             </h3>
           </div>
           <button
@@ -241,7 +241,7 @@ export const ProductAdminModal = ({ isOpen, onClose, onProductsUpdated, editingP
                   <input
                     type="text"
                     required
-                    placeholder="Ej: Anillo Solitario 'Luz de Plata' Ley 925 con Circones"
+                    placeholder="Ej: Anillo Solitario 'Luz de Plata' con Circones"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full p-2.5 rounded-xl bg-[#161824] border border-gray-800 text-white placeholder-gray-500 focus:outline-none focus:border-slate-400"
@@ -411,7 +411,7 @@ export const ProductAdminModal = ({ isOpen, onClose, onProductsUpdated, editingP
                 <div className="flex gap-2">
                   <input
                     type="text"
-                    placeholder="Nuevo metal (ej: Plata Italiana 925, Plata Rodinada, Plata Bali...)"
+                    placeholder="Nuevo metal (ej: Plata Fina, Plata Rodinada, Plata Bali...)"
                     value={newMaterialInput}
                     onChange={(e) => setNewMaterialInput(e.target.value)}
                     className="flex-1 p-2 rounded-lg bg-[#161824] border border-gray-800 text-white placeholder-gray-500"

@@ -7,7 +7,7 @@ export const ProductModal = ({ product, onClose, onEdit }) => {
 
   const { addToCart, setIsCartOpen, setIsCheckoutOpen, toggleWishlist, isWishlisted, formatPrice } = useCart()
   const [selectedImageIndex, setSelectedImageIndex] = useState(0)
-  const [selectedMaterial, setSelectedMaterial] = useState(product.materials ? product.materials[0] : 'Plata Ley 925')
+  const [selectedMaterial, setSelectedMaterial] = useState(product.materials ? product.materials[0] : 'Plata Fina')
   const [selectedSize, setSelectedSize] = useState(product.sizes ? product.sizes[0] : 'Estándar')
   const [quantity, setQuantity] = useState(1)
   const [showSizeGuide, setShowSizeGuide] = useState(false)
@@ -126,7 +126,7 @@ export const ProductModal = ({ product, onClose, onEdit }) => {
             <div className="hidden sm:grid grid-cols-3 gap-2 p-3 rounded-xl bg-[#171924] border border-[#262937] text-center text-xs">
               <div className="flex flex-col items-center gap-1 text-gray-300">
                 <Award className="w-4 h-4 text-slate-300" />
-                <span className="text-[10px] font-medium">Plata 925 Genuina</span>
+                <span className="text-[10px] font-medium">Plata Auténtica</span>
               </div>
               <div className="flex flex-col items-center gap-1 text-gray-300">
                 <ShieldCheck className="w-4 h-4 text-slate-300" />

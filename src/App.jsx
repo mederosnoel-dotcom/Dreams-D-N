@@ -162,13 +162,13 @@ function StoreContent() {
             
             <div className="space-y-2">
               <span className="text-[11px] font-semibold text-slate-300 uppercase tracking-widest block">
-                Vitrina de Plata Ley 925 Lista
+                Vitrina de Plata Lista
               </span>
               <h3 className="font-serif text-2xl sm:text-3xl font-normal text-white">
                 Comienza a exhibir tus joyas de plata
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
-                La tienda está configurada exclusivamente para <strong>Plata Esterlina Ley 925</strong>. Ahora puedes introducir tus propias joyas con sus fotos (desde tu móvil o PC), precio, tipo de plata y características personalizadas.
+                La tienda está configurada exclusivamente para <strong>Plata Fina</strong>. Ahora puedes introducir tus propias joyas con sus fotos (desde tu móvil o PC), precio, tipo de plata y características personalizadas.
               </p>
             </div>
 
@@ -185,7 +185,7 @@ function StoreContent() {
                 onClick={handleLoadSamples}
                 className="w-full sm:w-auto px-5 py-3 rounded-full border border-slate-700 bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-medium transition-all"
               >
-                Cargar 2 Joyas de Muestra en Plata 925
+                Cargar 2 Joyas de Muestra en Plata
               </button>
             </div>
           </div>

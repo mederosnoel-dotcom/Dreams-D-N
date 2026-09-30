@@ -101,7 +101,7 @@ export const OrderSuccessModal = ({ order, onClose }) => {
         {/* Assurance */}
         <div className="flex items-center justify-center gap-2 text-[10px] text-gray-500">
           <ShieldCheck className="w-3.5 h-3.5 text-slate-300" />
-          <span>Garantía de pureza Plata Esterlina Ley 925 certificada 100% genuina</span>
+          <span>Garantía de pureza de Plata Fina certificada 100% genuina</span>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 -- ====================================================================
 -- DREAMS D&N | ESQUEMA DE BASE DE DATOS SUPABASE (POSTGRESQL)
--- Joyería Fina en Plata Esterlina Ley 925 & Comercio Electrónico
+-- Joyería Fina de Plata & Comercio Electrónico
 -- ====================================================================
 
 -- 1. TABLA DE PRODUCTOS
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS public.products (
   shortDescription TEXT,
   description TEXT,
   images TEXT[] NOT NULL,
-  materials TEXT[] DEFAULT ARRAY['Plata Ley 925'],
+  materials TEXT[] DEFAULT ARRAY['Plata Fina'],
   sizes TEXT[] DEFAULT ARRAY['Estándar'],
   stock INTEGER DEFAULT 1,
   tag TEXT,

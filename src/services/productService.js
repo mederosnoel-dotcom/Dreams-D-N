@@ -24,7 +24,7 @@ export const productService = {
           return data.map(item => ({
             ...item,
             images: Array.isArray(item.images) ? item.images : (item.images ? [item.images] : []),
-            materials: Array.isArray(item.materials) ? item.materials : ['Oro 18K'],
+            materials: Array.isArray(item.materials) ? item.materials : ['Plata Fina'],
             sizes: Array.isArray(item.sizes) ? item.sizes : ['Estándar']
           }))
         }
@@ -70,15 +70,15 @@ export const productService = {
         : ['https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=80'],
       materials: Array.isArray(productData.materials) && productData.materials.length > 0
         ? productData.materials
-        : ['Plata Ley 925'],
+        : ['Plata Fina'],
       sizes: Array.isArray(productData.sizes) && productData.sizes.length > 0
         ? productData.sizes
         : ['Estándar'],
       specs: productData.specs || {
-        metal: 'Plata Esterlina Ley 925',
+        metal: 'Plata Fina',
         gem: 'Circones / Piedras Finas',
         weight: 'Garantizado',
-        guarantee: 'Certificado de Plata 925 DREAMS D&N'
+        guarantee: 'Certificado de Autenticidad DREAMS D&N'
       }
     }
 
