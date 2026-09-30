@@ -70,15 +70,15 @@ export const productService = {
         : ['https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=80'],
       materials: Array.isArray(productData.materials) && productData.materials.length > 0
         ? productData.materials
-        : ['Oro 18K'],
+        : ['Plata Ley 925'],
       sizes: Array.isArray(productData.sizes) && productData.sizes.length > 0
         ? productData.sizes
         : ['Estándar'],
       specs: productData.specs || {
-        metal: 'Oro 18K',
-        gem: 'Natural',
+        metal: 'Plata Esterlina Ley 925',
+        gem: 'Circones / Piedras Finas',
         weight: 'Garantizado',
-        guarantee: 'Certificado DREAMS D&N'
+        guarantee: 'Certificado de Plata 925 DREAMS D&N'
       }
     }
 

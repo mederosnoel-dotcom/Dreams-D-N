@@ -161,31 +161,31 @@ function StoreContent() {
             </div>
             
             <div className="space-y-2">
-              <span className="text-[11px] font-semibold text-[#e5c378] uppercase tracking-widest block">
-                Vitrina Lista & Exclusiva
+              <span className="text-[11px] font-semibold text-slate-300 uppercase tracking-widest block">
+                Vitrina de Plata Ley 925 Lista
               </span>
               <h3 className="font-serif text-2xl sm:text-3xl font-normal text-white">
-                Comienza a exhibir tus joyas
+                Comienza a exhibir tus joyas de plata
               </h3>
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed font-light">
-                Los productos iniciales han sido retirados. Ahora puedes introducir tus propias joyas con sus fotos (desde tu móvil o PC), precio, metales y características personalizadas.
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+                La tienda está configurada exclusivamente para <strong>Plata Esterlina Ley 925</strong>. Ahora puedes introducir tus propias joyas con sus fotos (desde tu móvil o PC), precio, tipo de plata y características personalizadas.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
               <button
                 onClick={handleOpenAddProduct}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-full gold-gradient-bg text-[#0b0c10] font-bold text-xs uppercase tracking-wider shadow-lg shadow-[#d4af37]/20 flex items-center justify-center gap-2 hover:brightness-110 active:scale-95 transition-all"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-full silver-gradient-bg text-[#090a0f] font-bold text-xs uppercase tracking-wider shadow-lg shadow-white/10 flex items-center justify-center gap-2 hover:brightness-110 active:scale-95 transition-all"
               >
                 <PlusCircle className="w-4 h-4" />
-                <span>Introducir Mi Primera Joya</span>
+                <span>Introducir Mi Primera Joya de Plata</span>
               </button>
 
               <button
                 onClick={handleLoadSamples}
-                className="w-full sm:w-auto px-5 py-3 rounded-full border border-gray-700 bg-white/5 hover:bg-white/10 text-gray-300 text-xs font-medium transition-all"
+                className="w-full sm:w-auto px-5 py-3 rounded-full border border-slate-700 bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-medium transition-all"
               >
-                Cargar 2 Joyas de Muestra
+                Cargar 2 Joyas de Muestra en Plata 925
               </button>
             </div>
           </div>

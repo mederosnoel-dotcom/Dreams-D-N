@@ -1,68 +1,69 @@
-// Catálogo para DREAMS D&N
+// Catálogo para DREAMS D&N — Joyería en Plata Esterlina Ley 925
 // Por solicitud del usuario, el catálogo inicia vacío para que solo se muestren los productos introducidos por el propietario.
 
 export const INITIAL_PRODUCTS = [];
 
-// Catálogo de respaldo opcional (por si el usuario desea cargar ejemplos en algún momento)
+// Catálogo de respaldo opcional en Plata Ley 925
 export const SAMPLE_PRODUCTS = [
   {
     id: "sample-1",
-    name: "Anillo Solitario 'Eternal Dream'",
+    name: "Anillo Solitario 'Luz de Plata' Ley 925",
     category: "anillos",
     categoryLabel: "Anillos",
-    price: 3250000,
-    originalPrice: 3800000,
+    price: 185000,
+    originalPrice: 220000,
     featured: true,
     rating: 5.0,
-    reviewCount: 42,
-    shortDescription: "Diamante corte brillante de 1.2 quilates engastado en oro blanco de 18k.",
-    description: "La cumbre de la alta joyería artesanal. El anillo Solitario Eternal Dream de DREAMS D&N celebra los momentos más trascendentales con un diamante certificado por la GIA de claridad VVS1, engastado en cuatro garras pulidas a mano.",
+    reviewCount: 38,
+    shortDescription: "Plata esterlina 925 italiana con circón suizo corte brillante y baño de rodio.",
+    description: "Diseño clásico y deslumbrante elaborado en auténtica Plata Esterlina Ley 925 con acabado rodinado antideslustre. Engasta un circón suizo de máxima refracción.",
     images: [
+      "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=900&q=80",
       "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=80"
     ],
-    materials: ["Oro Blanco 18K", "Oro Amarillo 18K", "Oro Rosa 18K"],
-    sizes: ["5", "6", "6.5", "7", "7.5", "8"],
-    stock: 5,
-    tag: "Más Vendido",
+    materials: ["Plata Ley 925", "Plata Rodinada"],
+    sizes: ["6", "6.5", "7", "7.5", "8"],
+    stock: 6,
+    tag: "Plata Ley 925",
     specs: {
-      metal: "Oro Blanco de 18k (750 milésimas)",
-      gem: "Diamante natural certificado GIA (1.2 ct, Color F, VVS1)",
-      weight: "4.8 gramos",
-      guarantee: "Certificado GIA y Garantía Vitalicia"
+      metal: "Plata Esterlina Ley 925 (Sello de Garantía)",
+      gem: "Circón Suizo Grado AAA",
+      weight: "3.8 gramos",
+      guarantee: "Certificado de Plata 925 y Garantía de Brillo"
     }
   },
   {
     id: "sample-2",
-    name: "Gargantilla 'Lágrima Imperial' con Zafiro",
+    name: "Gargantilla 'Gota Celestial' en Plata 925",
     category: "collares",
     categoryLabel: "Collares",
-    price: 2890000,
-    originalPrice: 3200000,
+    price: 195000,
+    originalPrice: 240000,
     featured: true,
     rating: 5.0,
-    reviewCount: 28,
-    shortDescription: "Zafiro azul profundo de corte pera rodeado de un halo de diamantes naturales.",
-    description: "Inspirada en la elegancia de la realeza moderna, esta gargantilla suspende una majestuosa gema de zafiro de Ceilán corte gota de 2.0 quilates. Su halo en oro blanco de 18k realza el fuego y la luminiscencia celestial de la joya.",
+    reviewCount: 24,
+    shortDescription: "Cadena veneciana en plata esterlina 925 con dije de zafiro azul creado y halo brillante.",
+    description: "Elegancia atemporal forjada en plata de ley 925 con dije colgante estilo lágrima real. Acabado de espejo con protección antialérgica y libre de níquel.",
     images: [
       "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=80"
     ],
-    materials: ["Oro Blanco 18K", "Oro Amarillo 18K"],
+    materials: ["Plata Ley 925", "Plata Rodinada"],
     sizes: ["40 cm", "45 cm", "50 cm"],
-    stock: 3,
-    tag: "Edición Limitada",
+    stock: 4,
+    tag: "Plata Italiana",
     specs: {
-      metal: "Oro Blanco 18K",
-      gem: "Zafiro Azul Real 2.0 ct + Halo de Diamantes (0.35 ct)",
-      weight: "6.2 gramos",
-      guarantee: "Certificado de Gemología DREAMS D&N"
+      metal: "Plata Ley 925 Italiana",
+      gem: "Gema Zafiro Creado 1.5 ct + Circones",
+      weight: "5.4 gramos",
+      guarantee: "Sello 925 y Certificado DREAMS D&N"
     }
   }
 ];
 
 export const CATEGORIES = [
-  { id: "todos", label: "Todas las Joyas", icon: "Sparkles" },
+  { id: "todos", label: "Toda la Plata", icon: "Sparkles" },
   { id: "anillos", label: "Anillos", icon: "CircleDot" },
-  { id: "collares", label: "Collares", icon: "Gem" },
-  { id: "pulseras", label: "Pulseras", icon: "Watch" },
-  { id: "aretes", label: "Aretes", icon: "Flame" }
+  { id: "collares", label: "Cadenas & Dijes", icon: "Gem" },
+  { id: "pulseras", label: "Pulseras & Manillas", icon: "Watch" },
+  { id: "aretes", label: "Aretes & Candongas", icon: "Flame" }
 ];

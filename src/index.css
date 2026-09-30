@@ -15,26 +15,27 @@
   font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
 }
 
-/* Custom luxury gold & metal effects */
-.gold-gradient-text {
-  background: linear-gradient(135deg, #fff6d6 0%, #e5c378 40%, #c49733 80%, #996e19 100%);
+/* Custom luxury sterling silver & platinum effects */
+.silver-gradient-text, .gold-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 25%, #cbd5e1 55%, #94a3b8 80%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.gold-gradient-bg {
-  background: linear-gradient(135deg, #e5c378 0%, #c49733 100%);
+.silver-gradient-bg, .gold-gradient-bg {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 40%, #cbd5e1 80%, #94a3b8 100%);
+  color: #0b0c10;
 }
 
-.gold-glow {
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+.silver-glow, .gold-glow {
+  box-shadow: 0 0 25px rgba(226, 232, 240, 0.25);
 }
 
 .glass-panel {
   background: rgba(18, 20, 26, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 /* Mobile optimizations */
@@ -47,8 +48,8 @@ html, body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background-color: #0b0c10;
-  color: #e5e7eb;
+  background-color: #090a0f;
+  color: #e2e8f0;
 }
 
 /* Subtle scrollbars */
@@ -57,12 +58,12 @@ html, body {
   height: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #0b0c10;
+  background: #090a0f;
 }
 ::-webkit-scrollbar-thumb {
-  background: #232733;
+  background: #252836;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #c49733;
+  background: #cbd5e1;
 }

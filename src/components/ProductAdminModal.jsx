@@ -25,15 +25,15 @@ export const ProductAdminModal = ({ isOpen, onClose, onProductsUpdated, editingP
     shortDescription: editingProduct?.shortDescription || '',
     description: editingProduct?.description || '',
     images: editingProduct?.images || [],
-    materials: editingProduct?.materials || ['Oro 18K', 'Oro Blanco 18K'],
+    materials: editingProduct?.materials || ['Plata Ley 925', 'Plata Rodinada'],
     sizes: editingProduct?.sizes || ['6', '7', '8'],
     stock: editingProduct?.stock || 5,
-    tag: editingProduct?.tag || 'Exclusivo D&N',
+    tag: editingProduct?.tag || 'Plata Ley 925',
     specs: editingProduct?.specs || {
-      metal: 'Oro 18K Garantizado',
-      gem: 'Diamante / Gema Natural',
-      weight: '4.5 gramos',
-      guarantee: 'Garantía Vitalicia'
+      metal: 'Plata Esterlina Ley 925',
+      gem: 'Circones Cúbicos / Piedras Naturales',
+      weight: '4.8 gramos',
+      guarantee: 'Certificado de Plata 925 & Garantía Vitalicia'
     }
   })
 
@@ -179,9 +179,9 @@ export const ProductAdminModal = ({ isOpen, onClose, onProductsUpdated, editingP
 
       const productPayload = {
         ...formData,
-        categoryLabel: catLabels[formData.category] || 'Joya Exclusiva',
-        shortDescription: formData.shortDescription || `${formData.name} forjado artesanalmente en ${formData.materials[0] || 'oro'}.`,
-        description: formData.description || `Pieza única de la colección DREAMS D&N. Diseñada con extrema precisión y brillo deslumbrante.`
+        categoryLabel: catLabels[formData.category] || 'Joya en Plata',
+        shortDescription: formData.shortDescription || `${formData.name} forjado artesanalmente en ${formData.materials[0] || 'plata esterlina ley 925'}.`,
+        description: formData.description || `Pieza única en auténtica plata esterlina ley 925 de la colección DREAMS D&N. Diseñada con extrema precisión y brillo deslumbrante.`
       }
 
       await productService.saveProduct(productPayload)
@@ -205,9 +205,9 @@ export const ProductAdminModal = ({ isOpen, onClose, onProductsUpdated, editingP
         {/* Header */}
         <div className="p-4 bg-[#0e1017] border-b border-[#232733] flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-[#d4af37]" />
+            <Sparkles className="w-5 h-5 text-slate-300" />
             <h3 className="font-serif text-base sm:text-lg font-semibold text-white tracking-wide">
-              {editingProduct ? 'Editar Joya' : 'Publicar Nueva Joya en Catálogo'}
+              {editingProduct ? 'Editar Joya' : 'Publicar Nueva Joya en Plata 925'}
             </h3>
           </div>
           <button
@@ -230,8 +230,8 @@ export const ProductAdminModal = ({ isOpen, onClose, onProductsUpdated, editingP
           <form onSubmit={handleSubmit} className="space-y-5 text-xs">
             {/* 1. Datos Básicos */}
             <div className="space-y-3">
-              <h4 className="font-semibold text-[#e5c378] uppercase tracking-wider text-[11px] flex items-center gap-1.5">
-                <Tag className="w-4 h-4 text-[#d4af37]" />
+              <h4 className="font-semibold text-slate-200 uppercase tracking-wider text-[11px] flex items-center gap-1.5">
+                <Tag className="w-4 h-4 text-slate-300" />
                 1. Información Principal
               </h4>
 
@@ -241,10 +241,10 @@ export const ProductAdminModal = ({ isOpen, onClose, onProductsUpdated, editingP
                   <input
                     type="text"
                     required
-                    placeholder="Ej: Anillo de Compromiso 'Luz de Luna' Oro 18K"
+                    placeholder="Ej: Anillo Solitario 'Luz de Plata' Ley 925 con Circones"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full p-2.5 rounded-xl bg-[#161824] border border-gray-800 text-white placeholder-gray-500 focus:outline-none focus:border-[#d4af37]"
+                    className="w-full p-2.5 rounded-xl bg-[#161824] border border-gray-800 text-white placeholder-gray-500 focus:outline-none focus:border-slate-400"
                   />
                 </div>
 
@@ -411,7 +411,7 @@ export const ProductAdminModal = ({ isOpen, onClose, onProductsUpdated, editingP
                 <div className="flex gap-2">
                   <input
                     type="text"
-                    placeholder="Nuevo metal (ej: Oro Rosa 18K, Plata 925...)"
+                    placeholder="Nuevo metal (ej: Plata Italiana 925, Plata Rodinada, Plata Bali...)"
                     value={newMaterialInput}
                     onChange={(e) => setNewMaterialInput(e.target.value)}
                     className="flex-1 p-2 rounded-lg bg-[#161824] border border-gray-800 text-white placeholder-gray-500"

@@ -8,13 +8,13 @@ export const OrderSuccessModal = ({ order, onClose }) => {
   const { formatPrice } = useCart()
 
   useEffect(() => {
-    // Disparar confeti dorado y plateado
+    // Disparar confeti plateado brillante
     try {
       confetti({
         particleCount: 80,
         spread: 70,
         origin: { y: 0.6 },
-        colors: ['#d4af37', '#f3e5ab', '#ffffff', '#e5c378']
+        colors: ['#ffffff', '#e2e8f0', '#94a3b8', '#cbd5e1', '#f8fafc']
       })
     } catch (e) {
       console.error(e)
@@ -100,8 +100,8 @@ export const OrderSuccessModal = ({ order, onClose }) => {
 
         {/* Assurance */}
         <div className="flex items-center justify-center gap-2 text-[10px] text-gray-500">
-          <ShieldCheck className="w-3.5 h-3.5 text-[#d4af37]" />
-          <span>Garantía de pureza de ley 750 y diamante certificado 100% genuino</span>
+          <ShieldCheck className="w-3.5 h-3.5 text-slate-300" />
+          <span>Garantía de pureza Plata Esterlina Ley 925 certificada 100% genuina</span>
         </div>
       </div>
     </div>

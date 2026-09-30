@@ -361,23 +361,23 @@ export const CheckoutModal = ({ onOrderSuccess }) => {
 
               {paymentType === 'card' && (
                 <div className="space-y-4">
-                  {/* Tarjeta Visual 3D Luxury Preview */}
-                  <div className="relative mx-auto max-w-sm w-full aspect-[1.586] rounded-2xl p-5 text-white shadow-2xl overflow-hidden border border-[#d4af37]/50 bg-gradient-to-br from-[#1b1e2a] via-[#10121a] to-[#252014]">
+                  {/* Tarjeta Visual 3D Luxury Preview (Plata / Platino) */}
+                  <div className="relative mx-auto max-w-sm w-full aspect-[1.586] rounded-2xl p-5 text-white shadow-2xl overflow-hidden border border-slate-400/60 bg-gradient-to-br from-[#1c202d] via-[#12151f] to-[#252b3d]">
                     {/* Background Luxury Texture Pattern */}
-                    <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:16px_16px]" />
+                    <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px]" />
 
                     {/* Card Top Row */}
                     <div className="relative flex justify-between items-center z-10">
                       <div className="flex items-center gap-2">
-                        {/* Metallic Gold Chip */}
-                        <div className="w-10 h-7 rounded-md bg-gradient-to-tr from-[#c59d3f] via-[#f7e296] to-[#b38622] border border-[#f0d47d] shadow-sm relative overflow-hidden flex items-center justify-center">
+                        {/* Metallic Silver Chip */}
+                        <div className="w-10 h-7 rounded-md bg-gradient-to-tr from-[#94a3b8] via-[#f8fafc] to-[#cbd5e1] border border-white/80 shadow-sm relative overflow-hidden flex items-center justify-center">
                           <div className="w-full h-0.5 bg-black/20 my-auto" />
                         </div>
                         {/* Contactless Wifi Icon */}
-                        <span className="text-gray-400 text-xs">)))</span>
+                        <span className="text-slate-300 text-xs">)))</span>
                       </div>
 
-                      <span className="font-serif tracking-widest text-xs uppercase text-[#e5c378] font-bold">
+                      <span className="font-serif tracking-widest text-xs uppercase text-slate-200 font-bold">
                         {cardBrand.name}
                       </span>
                     </div>
